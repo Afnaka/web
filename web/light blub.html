@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-transform: capitalize;
+        }
+        button{
+            margin-left: 48px;
+        }
+    </style>
+</head>
+<body>
+    <h1>bulb control</h1>
+    <img id="light" src="./images/bulb_off.jpg" alt="">
+    <br>
+    <button onclick="turnOn()">turn on</button>
+    <button onclick="turnOff()"> turn off</button>
+    <script>
+        function turnOn(){
+            document.getElementById("light").src="./images/bulb_on.jpg";
+        }
+        function turnOff(){
+            document.getElementById("light").src="./images/bulb_off.jpg";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top: 200px;
+        }
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+        }
+        p{
+            text-align: center;
+            text-transform: capitalize;
+        }
+        button{
+            margin-left: 680px;
+            padding: 10px;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <h1>change background color</h1>
+    <p>single click to change background color into red <br> double click to change background-color green</p>
+    <button id="change_color">change background-color</button>
+    <script>
+        button=document.getElementById('change_color');
+        button.addEventListener('click',()=>{
+            document.body.style.backgroundColor="red";
+        });
+        button.addEventListener('dblclick',()=>{
+            document.body.style.backgroundColor="green";
+        });
+
+</script>
+</body>
+</html>
