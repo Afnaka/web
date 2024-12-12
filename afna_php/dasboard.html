@@ -1,0 +1,23 @@
+<html>
+
+
+<body>
+<h1>welcome</h1>
+</body>
+</html>
+<?php
+$con=new mysqli("localhost","root","","student");
+if(isset($_POST['submit'])){
+$email=$_POST['email'];
+$password=$_POST['password'];
+$sel=$con->query("SELECT * FROM `student_det`WHERE email="$email" and password="$password"");
+if($sel->num_rows>0){
+echo"<script>alert('login succesfully')</script>";
+header("location:dasboard.html");
+}
+else{
+echo"<script>alert('login unsuccesfully')</script>";
+}
+}
+
+?>
